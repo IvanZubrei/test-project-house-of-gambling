@@ -232,6 +232,7 @@ h1, h2, h3, h4, p{
 }
 
 .home-gambling__btn{
+  position: relative;
   color: var(--main-clean-white-ffffff, #FFF);
   text-align: center;
   font-family: 'Lexend', sans-serif;
@@ -244,6 +245,11 @@ h1, h2, h3, h4, p{
   padding: 20px 72px;
   border-radius: 48px;
   background: var(--main-blue-478-bf-9, #478BF9);
+  z-index: 3;
+}
+
+.home-gambling__btn:hover{
+  transform: scale(1.1);
 }
 
 .home-gambling__ticker {
@@ -337,7 +343,6 @@ h1, h2, h3, h4, p{
 }
 
 .home-gambling__payment-info{
-  /* width: 531px; */
   height: 595px;
   display: flex;
   flex-direction: column;
