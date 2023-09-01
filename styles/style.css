@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('FuturaPTCond-Book.eot');
+  src: local('Futura PT Cond Book'), local('FuturaPTCond-Book'),
+      url('../fonts/futura-pt/FuturaPTCond-Book.eot') format('embedded-opentype'),
+      url('../fonts/futura-pt/FuturaPTCond-Book.woff2') format('woff2'),
+      url('../fonts/futura-pt/FuturaPTCond-Book.woff') format('woff'),
+      url('../fonts/futura-pt/FuturaPTCond-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html{
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -414,9 +426,73 @@ h1, h2, h3, h4, p{
 .home-gambling__payment-date{
   color: var(--transp-white-white-60, rgba(255, 255, 255, 0.60));
   font-feature-settings: 'liga' off;
-  font-family: Futura PT;
+  font-family: 'Futura PT', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 450;
   line-height: 16px;
+}
+
+.footer{
+  background: linear-gradient(180deg, rgb(17, 10, 29), rgb(18, 12, 32));
+}
+
+.footer__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 64px 64px 0px 0px;
+  border-top: 4px solid var(--main-blue-478-bf-9, #478BF9);
+  border-right: 4px solid var(--main-blue-478-bf-9, #478BF9);
+  border-left: 4px solid var(--main-blue-478-bf-9, #478BF9);
+  background: var(--main-deep-blue-1-e-1231, #1E1231);
+  padding: 40px 140px 24px 140px;
+}
+
+.footer-navigation__list{
+  display: flex;
+  gap: 40px;  
+}
+
+.footer-navigation__list-link{
+  color: var(--main-clean-white-ffffff, #FFF);
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px
+}
+
+.footer-navigation__list-link:hover{
+  color: var(--main-blue-478-bf-9, #478BF9);
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  text-decoration-line: underline;
+}
+
+.social__text{
+  color: var(--main-clean-white-ffffff, #FFF);
+  text-align: right;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 14px;
+}
+
+.social__list{
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.social__list-img:hover .hover-color{  
+  /* opacity: 0.5; */
+  fill: url(#paint0_linear_1043_201);
 }
