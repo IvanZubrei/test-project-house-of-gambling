@@ -133,14 +133,6 @@ h1, h2, h3, h4, p{
   border: 2px solid var(--additional-purple-9-dadf-2, #9DADF2);
   background: var(--main-navy-blue-110-a-1-d, #110A1D);
   cursor: pointer;
-}
-
-.header__login:hover{
-  border: 2px solid var(--additional-purple-9-dadf-2, #478BF9);
-  background: var(--main-blue-478-bf-9, #478BF9);
-}
-
-.header__login-text{
   color: var(--main-clean-white-ffffff, #FFF);
   text-align: center;
   font-family: 'Lexend', sans-serif;
@@ -149,6 +141,11 @@ h1, h2, h3, h4, p{
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.header__login:hover{
+  border: 2px solid var(--additional-purple-9-dadf-2, #478BF9);
+  background: var(--main-blue-478-bf-9, #478BF9);
 }
 
 .header__singup{
@@ -160,14 +157,6 @@ h1, h2, h3, h4, p{
   border: 2px solid var(--additional-purple-9-dadf-2, #9DADF2);
   background: var(--main-navy-blue-110-a-1-d, #110A1D);
   cursor: pointer;
-}
-
-.header__singup:hover{
-  border: 2px solid var(--additional-purple-9-dadf-2, #478BF9);
-  background: var(--main-blue-478-bf-9, #478BF9);
-}
-
-.header__singup-text{
   color: var(--main-clean-white-ffffff, #FFF);
   text-align: center;
   font-family: 'Lexend', sans-serif;
@@ -176,6 +165,33 @@ h1, h2, h3, h4, p{
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.header__singup:hover{
+  border: 2px solid var(--additional-purple-9-dadf-2, #478BF9);
+  background: var(--main-blue-478-bf-9, #478BF9);
+}
+
+.menu-mobile-btn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mobile-language__btn{
+  display: none;
+}
+
+.menu-btn{
+  display: none;
+}
+
+.menu-btn-close{
+  display: none;
+}
+
+.menu-mobile{
+  display: none;
 }
 
 .home-gambling{
@@ -216,7 +232,7 @@ h1, h2, h3, h4, p{
 }
 
 .home-gambling__block{
-  margin: 296px 30px 384px 140px;
+  padding: 296px 30px 384px 140px;
 }
 
 .home-gambling__title{
@@ -337,9 +353,15 @@ h1, h2, h3, h4, p{
 }
 }
 
+.home-gambling__ticker-mobile{
+  display: none;   
+}
+
 .home-gambling__blog{
   width: 531px;
-  margin: 140px 140px 30px 30px;
+  padding: 140px 0px 0px 0px;
+  margin-right: 140px;
+  margin-left: 15px;
   z-index: 3;
 }
 
@@ -355,6 +377,7 @@ h1, h2, h3, h4, p{
 }
 
 .home-gambling__payment-info{
+  width: 531px;
   height: 595px;
   display: flex;
   flex-direction: column;
@@ -363,7 +386,8 @@ h1, h2, h3, h4, p{
   border-radius: 100px;
   border: 3px solid var(--main-blue-478-bf-9, #478BF9);
   background: var(--transp-white-white-12, rgba(255, 255, 255, 0.12));  
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .simplebar-track.simplebar-vertical{
@@ -441,6 +465,7 @@ h1, h2, h3, h4, p{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
   border-radius: 64px 64px 0px 0px;
   border-top: 4px solid var(--main-blue-478-bf-9, #478BF9);
   border-right: 4px solid var(--main-blue-478-bf-9, #478BF9);
@@ -450,7 +475,7 @@ h1, h2, h3, h4, p{
 }
 
 .footer-navigation__list{
-  display: flex;
+  display: flex;  
   gap: 40px;  
 }
 
@@ -492,7 +517,340 @@ h1, h2, h3, h4, p{
   justify-content: flex-end;
 }
 
-.social__list-img:hover .hover-color{  
-  /* opacity: 0.5; */
+.social__list-img:hover .hover-color{ 
   fill: url(#paint0_linear_1043_201);
+}
+
+@media (max-width: 1800px) {
+  .home-gambling__ticker-down-left-container{
+    display: none;
+  }
+  .home-gambling__ticker-down-right-container{
+    display: none;
+  }
+}
+@media (max-width: 1455px) {
+  .home-gambling__block {
+    padding: 296px 30px 384px 30px;
+}
+  .home-gambling__blog{
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1255px) {
+  .home-gambling__container{
+    display: block;
+  }
+  .home-gambling__block{
+    padding: 70px 10px 32px 10px;
+  }
+  .home-gambling__title{
+    min-width: 300px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 46px;
+    line-height: 50px;
+    margin-bottom: 12px;
+  }
+  .home-gambling__text{
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .home-gambling__btn{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 20px;
+    margin-top: 24px;
+  }
+  .home-gambling__ticker {
+    display: none;
+  }
+  .home-gambling__ticker-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 300px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .home-gambling__ticker-up-left-container{
+    display: flex;
+    flex-direction: row;  
+    gap: 30px;
+    width: 350%;
+    animation: ticker-up-left 10s linear infinite;
+  }  
+  @keyframes ticker-up-left {
+    0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+  }  
+  .home-gambling__ticker-right-container{
+    display: flex;
+    flex-direction: row;
+    width: 350%;
+    animation: ticker-right 14s linear infinite;
+  }  
+  .home-gambling__ticker-mobile-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+  }  
+  .home-gambling__ticker-mobile-block svg{
+    height: 100%;
+  }  
+  @keyframes ticker-right {
+    0% {
+      transform: translateX(-50%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+  }  
+  .home-gambling__ticker-down-left-container{
+    display: flex;
+    flex-direction: row;
+    width: 350%;
+    animation: ticker-down-left 8s linear infinite;
+  }  
+  @keyframes ticker-down-left {
+    0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+  }
+  .home-gambling__blog{
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 33px 0 120px 0;    
+  }
+  .home-gambling__payment-info{
+    position: relative;
+    min-width: 300px;
+    border-radius: 50px;
+    padding: 10px 0 0 10px;
+    z-index: 3;
+  }
+  .home-gambling__payment{
+    padding: 15px 35px;
+    margin-right: 22px;
+  }
+  .home-gambling__payment-text{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .simplebar-track.simplebar-vertical{    
+    margin-right: 6px; 
+  }
+
+  .footer__content{
+    display: block;
+  }
+
+  .footer-navigation__list{
+    justify-content: center;
+  }
+
+  .social__text{
+    text-align: center;
+    padding-top: 14px;
+  }
+
+  .social__list{
+    justify-content: center;
+  }
+}
+@media (max-width: 1050px) {
+  .header__content-block {
+    display: block;    
+  }
+  .navigation__list{
+    justify-content: flex-end;
+  }
+  .header__profile {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1050px) {
+  .footer-navigation__list {
+    display: block;
+    text-align: center;    
+  }
+  .footer-navigation__list-item {
+    padding: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__content-block{
+    padding: 10px 14px;
+    border: 2px solid var(--main-blue-478-bf-9, #478BF9);
+  }
+  .nav{
+    display: none;
+  }
+  .header__profile{
+    display: none;
+  }
+  .menu-mobile-btn{
+    margin-left: auto;
+  }
+  .mobile-language__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 24px;
+    border: 2px solid var(--additional-purple-9-dadf-2, #9DADF2);
+    background: var(--main-navy-blue-110-a-1-d, #110A1D);
+  }
+  .mobile-language__btn svg{
+    width: 24px;
+  }
+  .menu-btn{    
+    display: flex;
+    width: 28px;
+    cursor: pointer;
+    z-index: 7;
+    margin: 0 8px;
+  }
+  .close-menu-btn{
+    display: none;
+  }
+  .open-close{
+    display: flex;
+    width: 45px;
+    cursor: pointer;    
+    margin: 0 8px;
+    transition: all 1s;
+  }
+  .img-close{
+    z-index: 3;
+  }
+  .menu-mobile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--main-navy-blue-110-a-1-d, #110A1D);
+    z-index: 1;
+    padding: 30px 8px 92px 8px;
+    transform: translateY(-120%);
+    transition: transform 0.5s ease;
+    z-index: 8;
+  }
+  .menu-mobile.menu-open{
+    transform: translateY(15%);
+  }
+  .mobile-navigation__list{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .mobile__login{
+    color: var(--main-clean-white-ffffff, #FFF);
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 13px 20px;
+    border-radius: 24px;
+    border: 2px solid var(--additional-purple-9-dadf-2, #9DADF2);
+    background: var(--main-deep-blue-1-e-1231, #1E1231);
+  }
+  .mobile__singup{
+    color: var(--main-clean-white-ffffff, #FFF);
+    text-align: center;
+    font-family: Lexend;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 13px 20px;
+    border-radius: 24px;
+    background: var(--main-blue-478-bf-9, #478BF9);
+  }
+  .navigation__list-item{
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 28px;
+    border: 2px solid var(--main-blue-478-bf-9, #478BF9);
+    background: var(--main-navy-blue-110-a-1-d, #110A1D);
+  }
+  .line-light{
+    left: -20px;
+    top: -250px;
+    width: 100px;
+    height: 800px;   
+    filter: blur(25px);
+  }
+  .circle-light{
+    right: -35px;
+    bottom: -20px;
+    width: 174px;
+    height: 174px;
+    border-radius: 174px;    
+    filter: blur(95px);
+  } 
+  .footer__content{
+    padding: 20px;
+  }
+  .footer-navigation__list{
+    text-align: left;
+    gap: 2px;
+  }
+  .footer-navigation__list-item {
+    padding: 2px;
+  }
+    .social-media{
+    width: 100%;
+  }  
+  .social__text{
+    text-align: start;
+    padding-top: 20px;
+    padding-bottom: 8px;
+  }
+  .social__list{
+    justify-content: flex-start;
+  }
+  .social__list-img{
+    width: 27px;
+  }
+}
+@media (max-width: 580px) {
+  .home-gambling__blog{
+    width: 400px;   
+  }
+  .home-gambling__payment-info{    
+    width: 400px;
+  }
+  .home-gambling__ticker-block svg{
+    width: 100px;    
+  }
+}
+@media (max-width: 450px) {
+  .home-gambling__blog{
+    width: 300px;   
+  }
+  .home-gambling__payment-info{    
+    width: 300px;
+  }
 }
